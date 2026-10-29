@@ -13,7 +13,16 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        return []; // replace this return statement with your own
+        // 1. Create a double array with the requested length.
+        // 2. For each index, store the number multiplied by the index plus one.
+        // 3. Return the completed array.
+        double[] multiples = new double[length];
+        for (int i = 0; i < length; i++)
+        {
+            multiples[i] = number * (i + 1);
+        }
+
+        return multiples;
     }
 
     /// <summary>
@@ -29,5 +38,11 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+        // 1. Reverse the entire list so the elements that will move to the end are at the front.
+        // 2. Reverse the first 'amount' elements to restore their original order.
+        // 3. Reverse the remaining elements to restore their original order.
+        data.Reverse();
+        data.Reverse(0, amount);
+        data.Reverse(amount, data.Count - amount);
     }
 }
